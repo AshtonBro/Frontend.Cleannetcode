@@ -87,14 +87,14 @@ ul li {
 	border-bottom: 3px solid #9b999a;
 }
 
-.project-items {
+.repository-items {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
 }
 
-.project__item {
+.repository__item {
     position: relative;
     width: 263px;
     height: 210px;
@@ -106,7 +106,7 @@ ul li {
 
 }
 
-.project__hoverscreen {
+.repository__hoverscreen {
     background: rgb(104 32 123);
     color: #fff;
     position: absolute;
@@ -123,28 +123,28 @@ ul li {
     cursor: pointer;
 }
 
-.project__item_title {
+.repository__item_title {
     padding-top: 80px;
     text-align: center;
 }
 
-.project__item_text {
+.repository__item_text {
     font-size: 21px;
     color: #fff;
 }
 
-.project__hoverscreen_text {
+.repository__hoverscreen_text {
     font-size: 14px;
     text-transform: uppercase;
     padding: 0 5px 0 5px;
     text-align: center;
 }
 
-.project__item {
+.repository__item {
     transform: perspective(1px) translateZ(0);
     box-shadow: 6px 8px 10px 2px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 0%);
 }
 
-.project__item:hover .project__hoverscreen {
+.repository__item:hover .repository__hoverscreen {
     opacity: 1;
 }
