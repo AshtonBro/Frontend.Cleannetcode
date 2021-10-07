@@ -9,6 +9,22 @@ header {
     background-color: rgb(45 51 59);
 }
 
+strong {
+    font-weight: bolder;
+}
+
+a {
+    color: rgb(104 32 123);
+    text-decoration: none;
+    background-color: transparent;
+    transition: .5s;
+	margin: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
 .container {
     max-width: 1140px;
     padding-right: 15px;
@@ -49,25 +65,9 @@ header {
     color: rgb(104 32 123);
 }
 
-strong {
-    font-weight: bolder;
-}
-
-a {
-    color: rgb(104 32 123);
-    text-decoration: none;
-    background-color: transparent;
-    transition: .5s;
-	margin: 0;
-}
-
 .menu {
     justify-content: flex-end;
     display: flex;
-}
-
-ul li {
-    list-style-type: none;
 }
 
 .menu__link {
