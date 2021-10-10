@@ -99,21 +99,33 @@ ul li {
     padding-bottom: 30px;
 }
 
+.main-title {
+    color: #fff;
+    text-align: center;
+    font-size: 23px;
+   padding-bottom: 65px;
+}
+
 .main-section {
     display: flex;
     justify-content: space-between;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+}
+
+.main-section-videos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .iframe-container {
     position: relative;
-    width: 78%;
-    padding-bottom: 37.25%;
+    width: 45%;
+    padding-bottom: 25.25%;
     height: 0;
 }
-
 
 .iframe-container iframe {
     position: absolute;
@@ -122,18 +134,23 @@ ul li {
     left: 0;
     width: 100%;
     height: 100%;
-}
+} 
 
 .main-section__video {
-    margin-right: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
 }
 
 .main-section__description {
-    width: 55%;
     color: #fff;
     text-align: justify;
-    font-size: 17px;
-    word-wrap: normal;
+    font-size: 20px;
+}
+
+.main-section__span {
+    color: #fff;
+    text-align: center;
 }
 
 .repository-items {
@@ -191,4 +208,81 @@ ul li {
 
 .repository__item:hover .repository__hoverscreen {
     opacity: 1;
+}
+
+.social-items {
+    color: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 526px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+.social__item {
+    cursor: pointer;
+}
+
+.selected {
+    border-color: rgb(104 32 123);
+    box-shadow: 0px 0px 10px rgb(104 32 123);
+    color: rgb(104 32 123);
+}
+
+.discord:hover {
+    border-color: #404eed;
+    box-shadow: 0px 0px 10px #404eed;
+    color: #404eed;
+}
+
+.youtube:hover {
+    border-color: #cc072e;
+    box-shadow: 0px 0px 10px #cc072e;
+    color: #cc072e;
+}
+
+.telegram:hover {
+    border-color: #2979FF;
+    box-shadow: 0px 0px 10px #2979FF;
+    color: #2979FF;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.youtube-image {
+    height: 73px;
+    width: 73px;
+}
+
+.telegram-image {
+    height: 73px;
+    width: 73px;
+}
+
+.discord-image {
+    height: 61px;
+    width: 61px;
 }
