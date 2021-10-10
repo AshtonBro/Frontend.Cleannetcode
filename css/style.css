@@ -9,6 +9,11 @@ header {
     background-color: rgb(45 51 59);
 }
 
+footer{
+    background-color: rgb(45 51 59);
+    height: 80px;
+}
+
 strong {
     font-weight: bolder;
 }
@@ -150,6 +155,7 @@ ul li {
 
 .main-section__span {
     color: #fff;
+    font-size: 20px;
     text-align: center;
 }
 
