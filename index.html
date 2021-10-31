@@ -9,6 +9,7 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <script defer src="js/script.js"></script>
   </head>
   <body>
     <header class="header" id="header">
@@ -254,27 +255,54 @@
     </section> -->
 
     <section class="social" id="social">
-      <div class="social-title title">Присоединяйтесь к нашему сообществу</div>
-      <ul class="social-items">
-        <a href="https://www.youtube.com/c/RomanTrufanovDev/featured" target="_blank">
-          <li class="social__item youtube selected" selected="true">
-            <img class="youtube-image" src="img/social/youtube.svg" alt="youtube" />
-            <i class="fa fa-youtube"></i>
-          </li>
-        </a>
-        <a href="https://discord.com/invite/XwfjyHxAnF" target="_blank">
-          <li class="social__item discord selected" selected="true">
-            <img class="discord-image" src="img/social/discord.svg" alt="discord" />
-            <i class="fa fa-discord"></i>
-          </li>
-        </a>
-        <a href="https://t.me/joinchat/ETnMMXnhJng4YmJi" target="_blank">
-          <li class="social__item telegram selected" selected="true">
-            <img class="telegram-image" src="img/social/telegram.svg" alt="telegram" />
-            <i class="fa fa-telegram"></i>
-          </li>
-        </a>
-      </ul>
+      <div class="container">
+        <div class="social-title title">Присоединяйтесь к нашему сообществу</div>
+        <ul class="social-items">
+          <a href="https://www.youtube.com/c/RomanTrufanovDev/featured" target="_blank">
+            <li class="social__item youtube selected" selected="true">
+              <img class="youtube-image" src="img/social/youtube.svg" alt="youtube" />
+              <i class="fa fa-youtube"></i>
+            </li>
+          </a>
+          <a href="https://discord.com/invite/XwfjyHxAnF" target="_blank">
+            <li class="social__item discord selected" selected="true">
+              <img class="discord-image" src="img/social/discord.svg" alt="discord" />
+              <i class="fa fa-discord"></i>
+            </li>
+          </a>
+          <a href="https://t.me/joinchat/ETnMMXnhJng4YmJi" target="_blank">
+            <li class="social__item telegram selected" selected="true">
+              <img class="telegram-image" src="img/social/telegram.svg" alt="telegram" />
+              <i class="fa fa-telegram"></i>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </section>
+
+    <section class="todo">
+      <div class="container">
+        <h3 class="title todo-title">Список заметок</h3>
+        <ul class="todo__list">
+          <!-- Render from JS -->
+        </ul>
+      </div>
+    </section>
+
+    <section class="note">
+      <div class="container">
+        <h3>Что необходимо сделать для сайта?</h3>
+        <form id="form">
+          <label>
+            <input
+              type="text"
+              class="note__fields note__name"
+              placeholder="Наименование операции"
+            />
+          </label>
+          <button type="submit" class="note__add">Добавить заметку</button>
+        </form>
+      </div>
     </section>
 
     <footer class="footer" id="footer">
