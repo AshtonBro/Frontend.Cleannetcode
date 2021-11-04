@@ -6,7 +6,7 @@ const todoList = document.querySelector('.todo__list'),
     form = document.querySelector('#form'),
     noteName = document.querySelector('.note__name');
 
-let dbNote = JSON.parse(localStorage.getItem('calc')) || [];
+let dbNotes = JSON.parse(localStorage.getItem('todoList')) || [];
 
 const renderNote = (note) => {
     const listItem = document.createElement('li');
@@ -45,7 +45,7 @@ const addNote = (event) => {
             isDone: false
         };
 
-        dbNote.push(note);
+        dbNotes.push(note);
         init();
 
     } else {
@@ -63,9 +63,8 @@ const deleteNote = (event) => {
     const target = event.target;
 
     if (target.classList.contains('todo_delete')) {
-        dbNote = dbNote
+        dbNotes = dbNotes
             .filter(note => note.id !== target.dataset.id);
-        console.log(target.dataset.id);
 
         init();
     }
@@ -75,15 +74,9 @@ const toggleDone = (event) => {
     const target = event.target;
 
     if (target.classList.contains('todo_done')) {
-
-        dbNote.forEach(note => {
+        dbNotes.forEach(note => {
             if (note.id == target.dataset.id) {
-
-                if (note.isDone) {
-                    note.isDone = false;
-                } else {
-                    note.isDone = true;
-                }
+                note.isDone = !note.isDone;
 
                 init();
             }
@@ -93,8 +86,8 @@ const toggleDone = (event) => {
 
 const init = () => {
     todoList.textContent = '';
-    dbNote.forEach(renderNote);
-    localStorage.setItem('calc', JSON.stringify(dbNote));
+    dbNotes.forEach(renderNote);
+    localStorage.setItem('todoList', JSON.stringify(dbNotes));
 };
 
 form.addEventListener('submit', addNote);
