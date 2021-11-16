@@ -9,7 +9,7 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <script defer src="js/script.js"></script>
+    <script type="module" src="js/index.js" defer></script>
   </head>
   <body>
     <header class="header" id="header">
@@ -282,25 +282,21 @@
 
     <section class="todo">
       <div class="container">
-        <h3 class="title todo-title">Список заметок</h3>
+        <h3 class="title">Список заметок</h3>
         <ul class="todo__list">
           <!-- Render from JS -->
         </ul>
-      </div>
-    </section>
 
-    <section class="note">
-      <div class="container">
-        <h3>Что необходимо сделать для сайта?</h3>
         <form id="form">
+          <h3 class="title form-title">Что необходимо сделать?</h3>
           <label>
             <input
               type="text"
-              class="note__fields note__name"
-              placeholder="Наименование операции"
+              class="issue__fields issue__input"
+              placeholder="Наименование задачи"
             />
           </label>
-          <button type="submit" class="note__add">Добавить заметку</button>
+          <button type="submit" class="issue__add">Добавить задачу</button>
         </form>
       </div>
     </section>

@@ -300,6 +300,22 @@ ul li {
   width: 61px;
 }
 
+#form {
+  margin-bottom: 40px;
+  background-color: #ddd;
+  border-radius: 25px;
+  padding: 15px 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 0 5px 0;
+}
+
 .todo {
   border-radius: 25px;
   padding: 15px 15px;
@@ -308,9 +324,8 @@ ul li {
   width: 400px;
 }
 
-.todo-title {
-  padding-bottom: 0px;
-  padding-top: 0px;
+.form-title {
+  color: #333;
 }
 
 .todo__list {
@@ -365,17 +380,7 @@ ul li {
   display: flex;
 }
 
-.note {
-  margin-bottom: 40px;
-  background-color: #ddd;
-  border-radius: 25px;
-  padding: 15px 15px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 400px;
-}
-
-.note__fields {
+.issue__fields {
   display: block;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -386,11 +391,11 @@ ul li {
   outline: transparent;
 }
 
-.note__fields:focus {
+.issue__fields:focus {
   border: 1px solid rgb(104 32 123);
 }
 
-.note__add {
+.issue__add {
   background-color: rgb(104 32 123);
   border-width: 2px;
   border-style: solid;
@@ -405,7 +410,11 @@ ul li {
   cursor: pointer;
 }
 
-.note__add:hover {
+.issue__add:hover {
   background-color: white;
   color: rgb(104 32 123);
+}
+
+.invalid {
+  border-color: red;
 }
