@@ -2,13 +2,15 @@ import Player from "../units/player.js";
 import Wumpus from '../units/wumpus.js';
 import Bat from '../units/bat.js';
 import Hole from '../units/hole.js';
-import Animation from "../game-animations/animation.js";
 import Helper from "../helper/helper.js"
 
 export default class GameInstanse {
     constructor() {
+        this.gameWindow = document.querySelector('.game-map');
         this.mapW = 22;
         this.mapH = 12;
+        this.tileW = this.gameWindow.offsetWidth / this.mapW;
+        this.tileH = this.gameWindow.offsetHeight / this.mapH;
 
         this.player = new Player(3, 3);
 
@@ -20,13 +22,14 @@ export default class GameInstanse {
             new Bat(),
             new Bat(),
             new Bat(),
+            new Bat(),
             new Hole(),
             new Hole(),
             new Hole(),
             new Hole(),
-            new Hole(10, 10),
-            new Hole(2, 6),
-            new Hole(17, 8)
+            new Hole(),
+            new Hole(),
+            new Hole()
         ];
 
         this.map = [
@@ -44,22 +47,15 @@ export default class GameInstanse {
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         ]
 
-        this.animation = [
-            new Animation('img/sword.png', 3, this.player.posX, this.player.posY)
-        ];
-
-        this.#setValidLocation();
+        this.setValidLocation();
     }
 
     getGameMapLocation(x, y) {
         return this.map[y * this.mapW + x];
     }
 
-    #setValidLocation() {
+    setValidLocation() {
         this.enemies.forEach((enemy) => {
-            let currentLocation = this.getGameMapLocation(enemy.posX, enemy.posY);
-            if (currentLocation == 1) { return; }
-
             let newX = 0;
             let newY = 0;
             let isLocationValid = false;
