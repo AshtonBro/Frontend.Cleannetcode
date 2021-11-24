@@ -20,8 +20,8 @@ export default class Bat extends EnemyUnit {
         let isLocationValid = false;
 
         while (isLocationValid == false) {
-            newX = Helper.getRandomInt(1, gameInstanse.mapW);
-            newY = Helper.getRandomInt(1, gameInstanse.mapH);
+            newX = Helper.getRandomInt(1, gameInstanse.mapW - 1);
+            newY = Helper.getRandomInt(1, gameInstanse.mapH - 1);
 
             let newLocation = gameInstanse.getGameMapLocation(newX, newY);
 
